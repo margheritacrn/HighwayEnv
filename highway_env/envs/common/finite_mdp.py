@@ -72,7 +72,7 @@ def finite_mdp(env: 'AbstractEnv',
 
     # Creation of a new finite MDP
     try:
-        module = importlib.import_module("finite_mdp.mdp")
+        module = importlib.import_module("finite_mdp.py") #mdp
         mdp = module.DeterministicMDP(transition, reward, terminal, state=state)
         mdp.original_shape = grid.shape
         return mdp
